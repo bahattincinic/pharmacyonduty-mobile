@@ -9,7 +9,7 @@ export function reducer(state=core.InitialState, action) {
         case actions.fetchDistrictsAction.type:
             return core.fetchDistricts(state, action.districts)
         case actions.fetchPharmaciesAction.type:
-            return core.fetchPharmacies(state, action.pharmacies)
+            return core.fetchPharmacies(state, action.pharmacies, action.district)
     }
     return state
 }

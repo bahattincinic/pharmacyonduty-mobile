@@ -6,6 +6,7 @@ import Button from '../components/button'
 import Toolbar from '../components/toolbar'
 import {connect} from 'react-redux'
 import * as actionCreators from '../action_creators'
+import Pharmacy from './pharmacy'
 
 
 class Districts extends Component {
@@ -17,7 +18,12 @@ class Districts extends Component {
     }
 
     _buttonClicked(slug) {
-
+      requestAnimationFrame(() => {
+        this.props.fetchPharmacies(slug, {
+          navigator: this.props.navigator,
+          component: Pharmacy
+        })
+      })
     }
 
     _renderItem(item, idx) {
@@ -39,7 +45,7 @@ class Districts extends Component {
     render() {
         return (
             <View>
-                <Toolbar title="İlçeler" />
+                <Toolbar title="İlçeler" navigator={this.props.navigator} />
                 <ScrollView style={styles.container}>
                     {this.props.districts.map(this._renderItem.bind(this))}
                 </ScrollView>

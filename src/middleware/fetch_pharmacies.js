@@ -5,19 +5,22 @@ import * as actionCreators from '../action_creators'
 import Settings from '../settings'
 
 
-async function fetchDistricts(store, next, action) {
+async function fetchPharmacies(store, next, action) {
     try {
-        let absolte_url =  Settings.endpoints.pharmacies.replace("%s", actin.district)
+        let absolte_url =  Settings.endpoints.pharmacies.replace("%s", action.district)
         let url = Settings.server + absolte_url
         let options = { method: 'GET'
                       , headers: Settings.request_headers
                       }
 
-        const resp = await fetch(qurl, options)
+        const resp = await fetch(url, options)
         if (resp.status === 200) {
             const respjs = await resp.json()
             action.pharmacies = respjs.pharmacies
+            action.district = respjs.name
             next(action)
+
+            await store.dispatch(actionCreators.navigate(action.route))
         }
     } catch (err) {
       console.error(err)
