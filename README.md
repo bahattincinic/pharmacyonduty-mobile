@@ -19,7 +19,7 @@ $ npm install -g react-native-cli
 $ brew install watchman
 $ brew install flow
 $ git clone git@github.com:bahattincinic/pharmacyonduty-mobile.git
-$ cd CheckFeel && npm install
+$ cd pharmacyonduty-mobile && npm install
 ```
 
 **Click the following links for more information:**
