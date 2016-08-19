@@ -1,7 +1,7 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {View, ScrollView, Text, InteractionManager} from 'react-native';
+import {View, ScrollView, Text, InteractionManager, Image} from 'react-native';
 import Button from '../components/button'
 import Toolbar from '../components/toolbar'
 import {connect} from 'react-redux'
@@ -24,8 +24,12 @@ class Districts extends Component {
         return (
             <View key={idx} style={styles.item}>
                 <Button onPress={this._buttonClicked.bind(this, item.slug)}>
-                    <View>
-                        <Text>{item.district}</Text>
+                    <View style={{flexDirection: "row"}}>
+                        <Image source={require("../images/district.png")}
+                          style={styles.icon} />
+                        <Text style={styles.text}>
+                          {item.district}
+                        </Text>
                     </View>
                 </Button>
             </View>
@@ -50,8 +54,18 @@ const styles = {
         marginLeft: 20,
         marginRight: 20
     },
+    icon: {
+      width: 30,
+      height: 30,
+      marginRight: 5
+    },
+    text: {
+      marginTop: 8,
+      marginLeft: 5
+    },
     item: {
       marginBottom: 10,
+      paddingBottom: 10,
       flexDirection: 'row',
       borderStyle: 'solid',
       borderBottomColor: '#f9f7f7',

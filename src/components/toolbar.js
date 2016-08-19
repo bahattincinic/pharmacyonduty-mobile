@@ -20,7 +20,7 @@ class Toolbar extends Component {
 
 const styles = {
     container: {
-        backgroundColor: '#00a2ed',
+        backgroundColor: '#de0000',
         height: 56,
         paddingTop: 10,
         flexDirection: 'row',
