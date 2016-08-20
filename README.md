@@ -43,7 +43,7 @@ Facebook recommended to Genymotion for Android Emulator. Genymotion is Fast And 
 ### To run the project for IOS (require Xcode)
 
 ```bash
-$ Open ios/LeonMobile.xcodeproj
+$ Open ios/pharmacyonduty.xcodeproj
 Run project with xcode.
 ```
 or
