@@ -10,7 +10,7 @@ pharmacyonduty uses react native, redux
 
 **Android**
 
-![List](screenshots/android_list.png)
+<img src="screenshots/android_list.png" width="370">
 ![List](screenshots/android_detail.png)
 
 ### Requirements
