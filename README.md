@@ -3,8 +3,15 @@ React Native implementation for Pharmacy *on duty* (https://github.com/emre/Phar
 
 pharmacyonduty uses react native, redux
 
-![List](screenshots/list.png)
-![List](screenshots/detail.png)
+**IOS**
+
+![List](screenshots/ios_list.png)
+![List](screenshots/ios_detail.png)
+
+**Android**
+
+![List](screenshots/android_list.png)
+![List](screenshots/android_detail.png)
 
 ### Requirements
 - [Xcode](https://developer.apple.com/xcode/)

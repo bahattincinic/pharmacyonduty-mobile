@@ -1,7 +1,7 @@
 'use strict'
 
 import React from 'react';
-import {TouchableNativeFeedback, View} from 'react-native';
+import { TouchableNativeFeedback, View } from 'react-native';
 
 const Button = (props) => {
   return <TouchableNativeFeedback
